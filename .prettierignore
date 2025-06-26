@@ -1,0 +1,11 @@
+node_modules
+.next
+.git
+dist
+build
+*.log
+yarn.lock
+package-lock.json
+.vscode
+.husky
+public

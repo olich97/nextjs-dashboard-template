@@ -1,0 +1,76 @@
+name: Dependency Updates
+
+on:
+  schedule:
+    # Run every Tuesday at 10 AM UTC
+    - cron: '0 10 * * 2'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-dependencies:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Check for outdated packages
+        id: outdated
+        run: |
+          yarn outdated --json > outdated.json || true
+          if [ -s outdated.json ]; then
+            echo "has_updates=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_updates=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update patch and minor versions
+        if: steps.outdated.outputs.has_updates == 'true'
+        run: |
+          # Update patch versions (safer updates)
+          yarn upgrade --pattern "^"
+          
+      - name: Run tests after update
+        if: steps.outdated.outputs.has_updates == 'true'
+        run: |
+          yarn lint
+          yarn type-check
+          yarn build
+
+      - name: Create Pull Request
+        if: steps.outdated.outputs.has_updates == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'chore: update dependencies'
+          title: '🔄 Automated dependency updates'
+          body: |
+            This PR contains automated dependency updates.
+            
+            🔍 **Changes:**
+            - Updated patch and minor version dependencies
+            - All tests and type checking passed
+            
+            📋 **Verification:**
+            - [x] Linting passed
+            - [x] TypeScript check passed  
+            - [x] Build successful
+            
+            🤖 This PR was created automatically by the dependency update workflow.
+          branch: automated-dependency-updates
+          delete-branch: true
+          labels: |
+            dependencies
+            automated
+            enhancement

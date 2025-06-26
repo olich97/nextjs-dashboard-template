@@ -258,6 +258,36 @@ yarn build
 yarn export
 ```
 
+## 🔒 Security & Maintenance
+
+### Automated Security Features
+- **ESLint Security Plugin**: Detects security anti-patterns automatically
+- **Weekly Security Audits**: Automated dependency vulnerability scanning
+- **Dependabot Integration**: Automatic security patch updates
+- **Pre-commit Hooks**: Security checks before every commit
+- **GitHub Security Advisories**: Continuous monitoring for vulnerabilities
+
+### Dependency Management
+```bash
+# Check for security vulnerabilities
+yarn security-audit
+
+# Check for outdated packages
+yarn check-updates
+
+# Interactive dependency updates
+yarn update-deps
+
+# Run all security checks
+yarn pre-commit
+```
+
+### Automated Workflows
+- **Security Audit**: Weekly vulnerability scanning
+- **Dependency Updates**: Automated patch-level updates via Dependabot
+- **CI Pipeline**: Lint, type-check, build, and security validation
+- **Code Quality**: Prettier + ESLint with security rules
+
 ## 📚 Examples
 
 Check out the `/app/dashboard` pages for complete examples of:

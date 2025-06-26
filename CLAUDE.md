@@ -173,11 +173,17 @@ Currently uses realistic mock data that can be easily replaced:
 
 ### Development Commands
 ```bash
-yarn dev          # Start development server (http://localhost:3000)
-yarn build        # Build for production
-yarn start        # Start production server
-yarn lint         # Run ESLint
-yarn type-check   # Run TypeScript checking
+yarn dev              # Start development server (http://localhost:3000)
+yarn build            # Build for production
+yarn start            # Start production server
+yarn lint             # Run ESLint
+yarn type-check       # Run TypeScript checking
+yarn security-audit   # Check for security vulnerabilities
+yarn check-updates    # Check for outdated packages
+yarn update-deps      # Interactive dependency updates
+yarn format           # Format code with Prettier
+yarn format:check     # Check if code is properly formatted
+yarn pre-commit       # Run all pre-commit checks
 ```
 
 ### Build Configuration
@@ -268,6 +274,42 @@ Use the example configurations in `template.config.ts`:
 - Responsive design works on all devices
 - Dark mode respects system preferences
 
+## Security & Dependency Management
+
+### Automated Security Features
+- **ESLint Security Plugin**: Detects security anti-patterns in code
+- **Weekly Security Audits**: GitHub Actions workflow runs yarn audit weekly
+- **Dependabot**: Automatically creates PRs for dependency security updates
+- **Pre-commit Hooks**: Runs security checks before every commit
+- **GitHub Security Advisories**: Monitors for known vulnerabilities
+
+### Security Configuration Files
+- `.eslintrc.json` - ESLint with security rules
+- `.github/workflows/security-audit.yml` - Weekly security audits  
+- `.github/dependabot.yml` - Automated dependency updates
+- `.github/SECURITY.md` - Security policy and reporting
+- `.husky/pre-commit` - Pre-commit security hooks
+
+### Dependency Management
+- **Dependabot**: Automated patch and minor version updates
+- **Weekly Audits**: Scheduled vulnerability scanning
+- **Interactive Updates**: `yarn update-deps` for manual updates
+- **Security Monitoring**: Continuous monitoring for vulnerabilities
+
+### Maintenance Commands
+```bash
+# Security and maintenance
+yarn security-audit     # Run dependency security audit
+yarn check-updates      # Check for outdated packages  
+yarn update-deps        # Interactive dependency updates
+yarn pre-commit         # Run all quality checks
+
+# Code quality
+yarn lint               # ESLint with security rules
+yarn format             # Format with Prettier
+yarn type-check         # TypeScript validation
+```
+
 ## Contributing
 
 When making changes:
@@ -277,6 +319,8 @@ When making changes:
 4. Add skeleton loading states for new components
 5. Test both light and dark themes
 6. Ensure mobile responsiveness
+7. Run `yarn pre-commit` before committing
+8. Security checks will run automatically on commit
 
 ## Questions or Issues
 
