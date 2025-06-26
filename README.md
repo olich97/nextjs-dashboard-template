@@ -261,10 +261,10 @@ yarn export
 ## 🔒 Security & Maintenance
 
 ### Automated Security Features
-- **ESLint Security Plugin**: Detects security anti-patterns automatically
+- **ESLint Rules**: Security-focused linting rules (no-eval, no-script-url, etc.)
 - **Weekly Security Audits**: Automated dependency vulnerability scanning
 - **Dependabot Integration**: Automatic security patch updates
-- **Pre-commit Hooks**: Security checks before every commit
+- **Pre-commit Hooks**: Lint and type-check before every commit
 - **GitHub Security Advisories**: Continuous monitoring for vulnerabilities
 
 ### Dependency Management
@@ -275,18 +275,21 @@ yarn security-audit
 # Check for outdated packages
 yarn check-updates
 
-# Interactive dependency updates
+# Interactive dependency updates (be careful with major versions)
 yarn update-deps
 
-# Run all security checks
+# Run pre-commit checks (lint + type-check)
 yarn pre-commit
+
+# Format code with Prettier
+yarn format
 ```
 
 ### Automated Workflows
-- **Security Audit**: Weekly vulnerability scanning
+- **Security Audit**: Weekly vulnerability scanning with `yarn audit`
 - **Dependency Updates**: Automated patch-level updates via Dependabot
 - **CI Pipeline**: Lint, type-check, build, and security validation
-- **Code Quality**: Prettier + ESLint with security rules
+- **Code Quality**: ESLint + Prettier for consistent code style
 
 ## 📚 Examples
 

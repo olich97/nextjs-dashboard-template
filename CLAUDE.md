@@ -277,10 +277,10 @@ Use the example configurations in `template.config.ts`:
 ## Security & Dependency Management
 
 ### Automated Security Features
-- **ESLint Security Plugin**: Detects security anti-patterns in code
+- **ESLint Security Rules**: Basic security rules (no-eval, no-script-url, etc.)
 - **Weekly Security Audits**: GitHub Actions workflow runs yarn audit weekly
 - **Dependabot**: Automatically creates PRs for dependency security updates
-- **Pre-commit Hooks**: Runs security checks before every commit
+- **Pre-commit Hooks**: Runs lint and type-check before every commit
 - **GitHub Security Advisories**: Monitors for known vulnerabilities
 
 ### Security Configuration Files

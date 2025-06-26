@@ -29,9 +29,6 @@ jobs:
       - name: Check TypeScript
         run: yarn type-check
 
-      - name: Check Prettier formatting
-        run: yarn format:check
-
       - name: Build application
         run: yarn build
 

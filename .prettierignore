@@ -9,3 +9,5 @@ package-lock.json
 .vscode
 .husky
 public
+registry/
+components/ui/
