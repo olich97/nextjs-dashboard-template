@@ -110,7 +110,7 @@
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^3.3.0",
-    "typescript": "5.8.2"
+    "typescript": "5.8.3"
   },
   "resolutions": {
     "@types/react": "19.0.12",
