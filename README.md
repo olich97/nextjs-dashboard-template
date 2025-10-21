@@ -2,6 +2,12 @@
 
 A modern, beautiful, and highly customizable dashboard template built with Next.js 15, TypeScript, and the latest web technologies. Perfect for building analytics dashboards, admin panels, SaaS applications, and business intelligence tools.
 
+Base Preset:
+![Preview](public/preview.png)
+
+Customizations Example:
+![Example](public/example.png)
+
 ## ✨ Features
 
 ### 🎨 **Beautiful UI Components**
