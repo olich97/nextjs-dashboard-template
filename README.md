@@ -25,7 +25,7 @@ Customizations Example:
 - **Real-time Data**: Server actions with realistic loading states
 
 ### ⚡ **Performance & Developer Experience**
-- **Next.js 15**: Latest features with Turbopack for fast development
+- **Next.js 16**: Latest features with Turbopack for fast development
 - **TypeScript**: Full type safety throughout the application
 - **Server Components**: Optimal performance with React 19
 - **Suspense Boundaries**: Proper loading states and error handling
