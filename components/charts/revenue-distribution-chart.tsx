@@ -12,6 +12,24 @@ interface RevenueDistributionChartProps {
 	data: RevenueDistributionChartDataItem[];
 }
 
+const CustomTooltip = ({ active, payload }: any) => {
+	if (active && payload && payload.length) {
+		const data = payload[0];
+		const percentage = ((data.value / data.payload.total) * 100).toFixed(1);
+
+		return (
+			<div className="bg-card p-3 border rounded-md shadow-lg">
+				<p className="font-medium text-card-foreground">{data.name}</p>
+				<p className="text-sm text-muted-foreground">
+					Revenue: ${Number(data.value).toLocaleString()}
+				</p>
+				<p className="text-sm font-medium text-primary">{percentage}% of total</p>
+			</div>
+		);
+	}
+	return null;
+};
+
 export function RevenueDistributionChart({ data }: RevenueDistributionChartProps) {
 	const COLORS = [
 		"#8b5cf6", // Purple
@@ -23,24 +41,6 @@ export function RevenueDistributionChart({ data }: RevenueDistributionChartProps
 		"#8b5cf6", // Purple (lighter)
 		"#14b8a6", // Teal
 	];
-
-	const CustomTooltip = ({ active, payload }: any) => {
-		if (active && payload && payload.length) {
-			const data = payload[0];
-			const percentage = ((data.value / data.payload.total) * 100).toFixed(1);
-			
-			return (
-				<div className="bg-card p-3 border rounded-md shadow-lg">
-					<p className="font-medium text-card-foreground">{data.name}</p>
-					<p className="text-sm text-muted-foreground">
-						Revenue: ${Number(data.value).toLocaleString()}
-					</p>
-					<p className="text-sm font-medium text-primary">{percentage}% of total</p>
-				</div>
-			);
-		}
-		return null;
-	};
 
 	// Calculate total for percentage calculations
 	const dataWithTotal = data.map(item => ({

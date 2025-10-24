@@ -21,5 +21,9 @@ export default defineConfig([{
         "no-implied-eval": "error",
         "no-new-func": "error",
         "no-script-url": "error",
+
+        // Disable overly strict React Compiler rules
+        // These flag standard React patterns like mounting state and localStorage sync
+        "react-hooks/set-state-in-effect": "off",
     },
 }]);

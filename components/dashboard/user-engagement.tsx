@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useMemo } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { UserEngagementChart } from "@/components/charts/user-engagement-chart";
@@ -21,6 +21,9 @@ async function UserEngagementContent() {
 	);
 }
 
+// Pre-generated stable heights for skeleton bars
+const SKELETON_HEIGHTS = [120, 80, 140, 100, 160, 90, 130, 110];
+
 function UserEngagementSkeleton() {
 	return (
 		<Card>
@@ -29,11 +32,11 @@ function UserEngagementSkeleton() {
 			</CardHeader>
 			<CardContent>
 				<div className="h-[280px] flex items-end justify-between space-x-2">
-					{[...Array(8)].map((_, i) => (
-						<Skeleton 
-							key={i} 
+					{SKELETON_HEIGHTS.map((height, i) => (
+						<Skeleton
+							key={i}
 							className="w-8"
-							style={{ height: `${Math.floor(Math.random() * 100) + 50}px` }}
+							style={{ height: `${height}px` }}
 						/>
 					))}
 				</div>
