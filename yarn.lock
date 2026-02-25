@@ -4185,10 +4185,10 @@
   resolved "https://registry.yarnpkg.com/@types/react-reconciler/-/react-reconciler-0.28.9.tgz#d24b4864c384e770c83275b3fe73fba00269c83b"
   integrity sha512-HHM3nxyUZ3zAylX8ZEyrDNd2XZOnQ0D5XfunJF5FLQnZbHHYq4UWvW1QfelQNXv1ICNkwYhfxjwfnqivYB6bFg==
 
-"@types/react-reconciler@^0.32.1":
-  version "0.32.1"
-  resolved "https://registry.yarnpkg.com/@types/react-reconciler/-/react-reconciler-0.32.1.tgz#6cb1d9bf85449a357517daf975d3d32149c1b2a7"
-  integrity sha512-RsqPttsBQ+6af0nATFXJJpemYQH7kL9+xLNm1z+0MjQFDKBZDM2R6SBrjdvRmHu9i9fM6povACj57Ft+pKRNOA==
+"@types/react-reconciler@^0.32.2":
+  version "0.32.3"
+  resolved "https://registry.yarnpkg.com/@types/react-reconciler/-/react-reconciler-0.32.3.tgz#eb4b346f367f29f07628032934d30a4f3f9eaba7"
+  integrity sha512-cMi5ZrLG7UtbL7LTK6hq9w/EZIRk4Mf1Z5qHoI+qBh7/WkYkFXQ7gOto2yfUvPzF5ERMAhaXS5eTQ2SAnHjLzA==
 
 "@types/react@19.2.10":
   version "19.2.10"
@@ -6954,27 +6954,27 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-konva@^19.0.10:
-  version "19.0.10"
-  resolved "https://registry.yarnpkg.com/react-konva/-/react-konva-19.0.10.tgz#8665d7f8558db6d7e727a3bed997293e5d817f5c"
-  integrity sha512-tJID7bungYs8ri5McjjlHWCniQMAasiNkTgATd8OJEnLrz3B7S5JN7nFkNfWETIHPx9rEN3gc+kQg32RhdZJcw==
+react-konva@^19.2.0:
+  version "19.2.0"
+  resolved "https://registry.yarnpkg.com/react-konva/-/react-konva-19.2.0.tgz#b4cc5d73cd6d642569e4df36a0139996c3dcf8e6"
+  integrity sha512-Ofifq/rdNvff50+Lj8x86WSfoeQDvdysOlsXMMrpD2uWmDxUPrEYSRLt27iCfdovQZL6xinKRpX9VaL9xDwXDQ==
   dependencies:
-    "@types/react-reconciler" "^0.32.1"
+    "@types/react-reconciler" "^0.32.2"
     its-fine "^2.0.0"
-    react-reconciler "0.32.0"
-    scheduler "0.26.0"
+    react-reconciler "0.33.0"
+    scheduler "0.27.0"
 
 react-otp-input@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/react-otp-input/-/react-otp-input-3.1.1.tgz#910169629812c40a614e6c175cc2c5f36102bb61"
   integrity sha512-bjPavgJ0/Zmf/AYi4onj8FbH93IjeD+e8pWwxIJreDEWsU1ILR5fs8jEJmMGWSBe/yyvPP6X/W6Mk9UkOCkTPw==
 
-react-reconciler@0.32.0:
-  version "0.32.0"
-  resolved "https://registry.yarnpkg.com/react-reconciler/-/react-reconciler-0.32.0.tgz#a08bcd8c454a4cd839164d6e05926e30a7a7fac2"
-  integrity sha512-2NPMOzgTlG0ZWdIf3qG+dcbLSoAc/uLfOwckc3ofy5sSK0pLJqnQLpUFxvGcN2rlXSjnVtGeeFLNimCQEj5gOQ==
+react-reconciler@0.33.0:
+  version "0.33.0"
+  resolved "https://registry.yarnpkg.com/react-reconciler/-/react-reconciler-0.33.0.tgz#9dd20208d45baa5b0b4701781f858236657f15e1"
+  integrity sha512-KetWRytFv1epdpJc3J4G75I4WrplZE5jOL7Yq0p34+OVOKF4Se7WrdIdVC45XsSSmUTlht2FM/fM1FZb1mfQeA==
   dependencies:
-    scheduler "^0.26.0"
+    scheduler "^0.27.0"
 
 "react-redux@8.x.x || 9.x.x":
   version "9.2.0"
@@ -7193,12 +7193,7 @@ safe-regex-test@^1.0.3, safe-regex-test@^1.1.0:
     es-errors "^1.3.0"
     is-regex "^1.2.1"
 
-scheduler@0.26.0, scheduler@^0.26.0:
-  version "0.26.0"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.26.0.tgz#4ce8a8c2a2095f13ea11bf9a445be50c555d6337"
-  integrity sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA==
-
-scheduler@^0.27.0:
+scheduler@0.27.0, scheduler@^0.27.0:
   version "0.27.0"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.27.0.tgz#0c4ef82d67d1e5c1e359e8fc76d3a87f045fe5bd"
   integrity sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==
