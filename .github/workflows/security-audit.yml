@@ -39,7 +39,7 @@ jobs:
         run: yarn type-check
 
       - name: Check for vulnerabilities in dependencies
-        uses: actions/dependency-review-action@v4
+        uses: actions/dependency-review-action@v5
         if: github.event_name == 'pull_request'
 
       - name: Create issue if vulnerabilities found
