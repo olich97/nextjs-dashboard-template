@@ -68,14 +68,14 @@
     "graphql": "^16.10.0",
     "graphql-request": "^7.1.2",
     "jotai": "^2.6.0",
-    "js-cookie": "^3.0.5",
+    "js-cookie": "^3.0.7",
     "konva": "^9.3.22",
     "lucide-react": "^0.523.0",
     "next": "16.0.0",
     "next-themes": "^0.4.0",
-    "react": "19.2.4",
+    "react": "19.2.6",
     "react-day-picker": "^9.7.0",
-    "react-dom": "19.2.4",
+    "react-dom": "19.2.6",
     "react-dropzone": "^14.2.3",
     "react-hook-form": "^7.49.2",
     "react-konva": "^19.0.10",
@@ -88,17 +88,17 @@
     "tailwind-merge": "^2.6.1",
     "tailwindcss-animate": "^1.0.7",
     "use-resize-observer": "^9.1.0",
-    "uuid": "^11.1.0",
+    "uuid": "^11.1.1",
     "vaul": "^1.1.2",
     "viem": "^2.24.1",
     "zod": "^3.25.76",
-    "zustand": "^5.0.11"
+    "zustand": "^5.0.13"
   },
   "devDependencies": {
     "@types/node": "22.19.0",
-    "@types/react": "19.2.10",
+    "@types/react": "19.2.15",
     "@types/react-dom": "19.2.3",
-    "@types/uuid": "^10.0.0",
+    "@types/uuid": "^11.0.0",
     "autoprefixer": "^10.4.24",
     "eslint": "^9",
     "eslint-config-next": "16.0.1",
@@ -113,7 +113,7 @@
     "typescript": "5.8.2"
   },
   "resolutions": {
-    "@types/react": "19.2.10",
+    "@types/react": "19.2.15",
     "@types/react-dom": "19.2.3"
   },
   "lint-staged": {
